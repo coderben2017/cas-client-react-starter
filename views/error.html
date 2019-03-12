@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>出错了</title>
+</head>
+<body>
+<div class="page page-full vertical-align text-center animation-fade page-error">
+    <div class="page-content vertical-align-middle">
+        <header>
+            <h1 class="animation-slide-top">
+                <span><%= error.status %> </span>
+            </h1>
+            <p>页面出错了（<%= error.message %>）</p>
+        </header>
+        <button class="btn btn-outline btn-primary btn-round" id="closeTab" href="javascript:;">返回上一页面</button>
+        <footer class="page-copyright">
+            <p>&copy; 2018 校云</p>
+        </footer>
+    </div>
+</div>
+<script>
+  document.querySelector('#closeTab').addEventListener('click', function () {
+    window.history.back(-1)
+  })
+</script>
+</body>
+</html>
